@@ -27,8 +27,6 @@ I will be focusing on learning Ruby, Ruby on Rails, JavaScript, HTML, CSS, MathJ
 
 I don't know how long it's going to take for me to reach a pinnacle on this site. The aspiration is to become more fluent in my mathematical skills, programming skills, and web development skills. By cementing my notes and exercises online and keeping a record of them, it will help not only me but those who utilize this site on their journey with Math.
 
-
-
 <!--
 # Latex Jekyll
 ![Alt text](./LatexJekyll.png?raw=true "LatexJekyll website")
