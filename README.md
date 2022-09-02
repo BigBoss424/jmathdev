@@ -1,89 +1,71 @@
-# JMathDev
+Freshman21
+==========
 
-----
+Freshman21 is a Jekyll blog theme, base on theme [Freshman](http://github.com/yulijia/freshman). 
 
-I am using a template by [Hammie217](https://github.com/Hammie217) from this [repository](https://github.com/Hammie217/LatexJekyll). Feel free to copy from my version.
+A tribute to WordPress Theme Twenty-Twelve and Twenty-eleven.
 
-## Table of Contents
-
-- [JMathDev](#jmathdev)
-  - [Table of Contents](#table-of-contents)
-  - [Promise](#promise)
-  - [Purpose](#purpose)
-  - [Pinnacle](#pinnacle)
-
-## Promise
-
-I promise to use this template for educational purposes and not for profit. Though if there is, I would be very grateful. All information on this blog is free of charge and open to the public.
-
-## Purpose
-
-This is to be a publication of my notes from my
-Math courses from here on out, from Calculus and beyond. I will be utilizing this blog to learn LaTex, and how to implement it online, so I can better express myself mathematically online. I want to sharpen my skills when it comes to Data Analysis and want to use this blog as a way I can test out if I can express my notes and thoughts, Algebraically, Graphically, Functionally, and Orally.
-
-I will be focusing on learning Ruby, Ruby on Rails, JavaScript, HTML, CSS, MathJax, and other libraries that I will utilize to represent the graphs on this site.
-
-## Pinnacle
-
-I don't know how long it's going to take for me to reach a pinnacle on this site. The aspiration is to become more fluent in my mathematical skills, programming skills, and web development skills. By cementing my notes and exercises online and keeping a record of them, it will help not only me but those who utilize this site on their journey with Math.
+Enjoy.
 
 
+![Screen](http://i.imgur.com/oSp7kacl.png)
 
-<!--
-# Latex Jekyll
-![Alt text](./LatexJekyll.png?raw=true "LatexJekyll website")
-## Try it out
-[Try it here](https://unruffled-ardinghelli-55d901.netlify.app)
+### Version 2.1 update 2016.06.06
 
-## Getting started from scratch
-1. Clone  
-```git clone https://github.com/Hammie217/LatexJekyll.git```  
-2. Change directory  
-```cd LatexJekyll```  
-3. Updating bundle to resolve dependecy errors
-```bundle update```
-> Before running `bundle update` command make sure your system meets the [Jekyll Installation Requirements](https://jekyllrb.com/docs/installation/).
-4. Start Jekyll Server  
-```jekyll serve```  
-5. Connect to localhost  
+- master branch: the simplest template, original version with
+	* Open Graph META Tags
+	* Microdata(schema.org)
 
-## What is there?
+- gh-pages branch: master branch with 
 
-### Title settings
+	* [google analytics js template](https://github.com/yulijia/freshman21/blob/gh-pages/_includes/google_analytics.js)
+        * [BackToTop js script](https://github.com/yulijia/freshman21/tree/gh-pages/js)
+        * <q>readmore</q> module
+        * [keyboard shortcuts for pagination](http://yulijia.net/freshman21/news/2016/05/24/new-features.html)
+	* font awesome icon
+	* [Google search](https://github.com/yulijia/freshman21/blob/gh-pages/_includes/google_search.js)
 
- - title - Set the main page title
- - author -  Set the authors name on the title page. Removed if none defined.
- - date - Set the front page date. Removed if none defined.
- - abstract - Set the text for the abstract. Removed if none defined.
+Clone master branch: 
+
+` git clone https://github.com/yulijia/freshman21.git -b master --single-branch`
+
+Clone gh-pages branch: 
+
+`git clone https://github.com/yulijia/freshman21.git -b gh-pages --single-branch`
 
 
-### Sections
+### A Summary of Features
 
- - Section - Sets font styling of section. Requires manual numbering. `<p  class="Section">1 &ensp; Introduction</p>`
- - Sub Section - Sets font styling of subsection. Requires manual numbering. `<p  class="SubSection">1.2 &ensp; Text Styles</p>`
+- Provide single column and two columns layout
+- Powerful configure file
+- Comments by Disqus
+- Support LaTeX (by MathJax)
+- Syntax highlighting
+- Multiple Languages support 
+    * English
+    * Chinese
+    * Japanese (Contributed by [kokeiro001](https://github.com/kokeiro001))
+    * Polish (Contributed by [Derson5](https://github.com/Derson5))
+    * Korean (Contributed by [Clifford Choi](https://github.com/ulgoon))
+    * Russian (Contributed by [Anton Alekseev](https://github.com/alexeyev))
+    * Turkish (Contributed by [Muhammet Kara](https://github.com/mrkara))
+    * Indonesian (Contributed by [Samsul Ma'arif](https://github.com/samsulmaarif))
 
-### Body settings
+### How to install this theme?
 
- - BodyText - Sets paragraph settings for single column. `<p  class="BodyText">`
- - BodyText2Col  - Sets paragraph settings for double colum. `<p  class="BodyText2Col">`
- - BodyText3Col  - Sets paragraph settings for triple column. `<p  class="BodyText3Col">`
- - Justified - Justifies text to take 100% of the width. `<p  class="Justified">`
+```
+# please make sure you have already installed git tools and ruby tools(gem)
+$ gem install sass
+$ gem install jekyll
+$ git clone https://github.com/yulijia/freshman21.git
+$ mv freshman21/ yourblogname.github.io/
 
-### Font sizes
+```
 
- - tiny
- - scriptsize
- - footnotesize
- - small
- - normalsize
- - large
- - Large
- - LARGE
- - huge
- - HUGE
+### Demo
 
- ### Maths
+Single column, please see [my own blog](http://yulijia.net/en/)
 
- Maths is delivered using mathJax. An inline latex equation can be done with "\\( ... \\)" or on a new line using "\\[ ... \\]" 
+Two columns, please see the [theme website](http://yulijia.net/freshman21/)
 
- -->
+

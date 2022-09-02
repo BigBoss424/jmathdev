@@ -1,30 +1,39 @@
 ---
 layout: default
-title: jMathDev
-author: Aaron Jones
-date: August 23 2022
-abstract: This is my first attempt to create a math focused blog using Jekyll.
 ---
-<p class="Section">1 &ensp; Introduction</p>
-    <p class="BodyText">This has been my first attempt at Jekyll and with such it is likely not too great. I'd like to design this to work a bit more seamlessly aka without inline styling in the page.
-        I imagine this is possible but not too sure how to do it yet. I also want to add more Latex style designs such as designed lists and sub sections etc.
-    </p>
 
-    <p class="BodyText">Body Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu molestie nibh. Integer faucibus aliquam congue. Praesent egestas, augue ac pharetra volutpat, arcu turpis tempor tortor, eget posuere mi sem in neque. Aliquam pretium dolor non mauris hendrerit, nec posuere sem interdum. Praesent malesuada nunc in nisi fringilla tempor. Integer non ante eros. Quisque lacinia ullamcorper scelerisque. Integer pulvinar nunc ipsum, eget placerat urna commodo vel. Nullam diam justo, egestas sollicitudin ligula sed, vehicula egestas justo. Sed dictum ipsum rutrum sagittis tempor. Etiam semper mauris varius, ultricies diam id, vestibulum odio.
-    </p>
+<div class="home">
+  <div class="post" itemscope itemtype="http://schema.org/BlogPosting" >
+    
+    {% for post in paginator.posts %}
+  
+    <header class="post-header">
+      <h1 itemprop="name" class="post-title">
+        <a itemprop="url" class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h1>
+      <meta itemprop="keywords" content="{{ post.tags | join: ',' }}" />
+      <p class="post-meta">
+      {{ site.locales[site.default_locale].PostedInCategories }}
+      {% for cat in post.categories %}
+      <a href="{{site.baseurl}}/categories/#{{ cat }}">{{ cat }}</a>{% unless post.categories.last == cat%}, {% endunless %}
+      {% endfor %}
+      {% if post.tags != empty %}
+      {{ site.locales[site.default_locale].Taggedwith }}
+      {% for tag in post.tags %}
+      <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>{% unless post.tags.last == tag %}, {% endunless %}
+      {% endfor %}
+      {% endif %}
+      <time itemprop="datePublished" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+      {{ site.locales[site.default_locale].PostDate }}{{ post.date | date: "%b %-d, %Y" }}
+      </time>
+      </p>
+    </header>
 
-    <p class="BodyText">
-    When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-    \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
-    </p>
-
-<p class="SubSection">1.2 &ensp; Text Styles</p>
-    <p class="BodyText Justified">Justified Body Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu molestie nibh. Integer faucibus aliquam congue. Praesent egestas, augue ac pharetra volutpat, arcu turpis tempor tortor, eget posuere mi sem in neque. Aliquam pretium dolor non mauris hendrerit, nec posuere sem interdum. Praesent malesuada nunc in nisi fringilla tempor. Integer non ante eros. Quisque lacinia ullamcorper scelerisque. Integer pulvinar nunc ipsum, eget placerat urna commodo vel. Nullam diam justo, egestas sollicitudin ligula sed, vehicula egestas justo. Sed dictum ipsum rutrum sagittis tempor. Etiam semper mauris varius, ultricies diam id, vestibulum odio.
-    </p>
-
-
-    <p class="BodyText2Col Justified">2 Column Justified Body Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu molestie nibh. Integer faucibus aliquam congue. Praesent egestas, augue ac pharetra volutpat, arcu turpis tempor tortor, eget posuere mi sem in neque. Aliquam pretium dolor non mauris hendrerit, nec posuere sem interdum. Praesent malesuada nunc in nisi fringilla tempor. Integer non ante eros. Quisque lacinia ullamcorper scelerisque. Integer pulvinar nunc ipsum, eget placerat urna commodo vel. Nullam diam justo, egestas sollicitudin ligula sed, vehicula egestas justo. Sed dictum ipsum rutrum sagittis tempor. Etiam semper mauris varius, ultricies diam id, vestibulum odio.
-    </p>
-
-    <p class="BodyText3Col Justified">3 Column Justified Body Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu molestie nibh. Integer faucibus aliquam congue. Praesent egestas, augue ac pharetra volutpat, arcu turpis tempor tortor, eget posuere mi sem in neque. Aliquam pretium dolor non mauris hendrerit, nec posuere sem interdum. Praesent malesuada nunc in nisi fringilla tempor. Integer non ante eros. Quisque lacinia ullamcorper scelerisque. Integer pulvinar nunc ipsum, eget placerat urna commodo vel. Nullam diam justo, egestas sollicitudin ligula sed, vehicula egestas justo. Sed dictum ipsum rutrum sagittis tempor. Etiam semper mauris varius, ultricies diam id, vestibulum odio.
-    </p>
+    <article class="post-content" itemprop="articleBody">
+      {{ post.content }}
+    </article> <hr />
+    
+    {% endfor %}
+  
+  </div>
+</div>
